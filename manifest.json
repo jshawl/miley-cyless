@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "Miley Cyless",
+  "description": "Censors your content",
+  "version": "0.0.1",
+  "homepage_url": "http://jshawl.github.io/miley-cyless/",
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*","https://*/*"],
+      "css": ["miley-cyless.css"],
+      "js": ["jquery.min.js", "miley-cyless.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
