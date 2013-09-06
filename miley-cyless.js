@@ -1,12 +1,15 @@
 (function(){
   var mileyCyless = {
-    wordsToCensor : [
-     'Miley Cyrus',
-     'MileyCyrus',
-     'Miley Ray Cyrus'
-    ],
+      
     init: function(){
-      $.each(this.wordsToCensor, function(i,el){
+      if(localStorage["mc_words"]){
+        var wordsToCensor = JSON.parse(localStorage['mc_words'])
+      } else {
+        wordsToCensor = [
+          'Miley Cyrus'
+        ]
+      }
+      $.each(wordsToCensor, function(i,el){
         mileyCyless.censor(el);
       });
     },
