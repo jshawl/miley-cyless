@@ -7,9 +7,15 @@ function MileyCylessCtrl($scope) {
       'something else'
     ];
   }
+  
   $scope.addWord = function(){
     $scope.words.push($scope.word);
     localStorage['words']=JSON.stringify($scope.words);
     $scope.word = '';
+  }
+
+  $scope.remove = function(word){
+    var index=$scope.words.indexOf(word)
+    $scope.words.splice(index,1);  
   }
 }
