@@ -6,6 +6,7 @@
   "version": "0.0.1",
   "homepage_url": "http://jshawl.github.io/miley-cyless/",
   "options_page": "options.html",
+  "background_page":"background.html",
   "content_scripts": [
     {
       "matches": ["http://*/*","https://*/*"],

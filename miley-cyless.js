@@ -9,6 +9,12 @@
           'Miley Cyrus'
         ]
       }
+      chrome.extension.sendRequest(
+          {method: "getLocalStorage", key: "mc_words"},
+	      function(response) {
+	            alert(response.data);
+		        }
+			  );
       $.each(wordsToCensor, function(i,el){
         mileyCyless.censor(el);
       });
